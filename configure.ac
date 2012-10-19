@@ -37,6 +37,10 @@ dnl Set locations of headers and makefiles.
 AM_CONFIG_HEADER([include/mod_depends_config.h:config.in])
 AC_CONFIG_FILES([Makefile src/Makefile])
 
+dnl Check for correct source directory.
+AC_CONFIG_SRCDIR([src/mod_depends.c])
+
+dnl Check that we have version 2.0.40+ of Apache and get useful vars.
 AP_VERSION=2.0.40
 CHECK_APACHE(,$AP_VERSION,
     :,:,
