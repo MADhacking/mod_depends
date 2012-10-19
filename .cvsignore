@@ -9,3 +9,6 @@ aclocal.m4
 ltmain.sh
 missing
 depcomp
+Makefile
+libtool
+config.status

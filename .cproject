@@ -46,6 +46,13 @@
 		<project id="mod_depends.org.eclipse.linuxtools.cdt.autotools.core.projectType.1085716171" name="GNU Autotools" projectType="org.eclipse.linuxtools.cdt.autotools.core.projectType"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="org.eclipse.linuxtools.cdt.autotools.core.configuration.build.1876638904;org.eclipse.linuxtools.cdt.autotools.core.configuration.build.1876638904.;org.eclipse.linuxtools.cdt.autotools.core.toolchain.tool.gcc.932908288;cdt.managedbuild.tool.gnu.c.compiler.input.1567856124">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -433,12 +440,5 @@
 				<runAllBuilders>false</runAllBuilders>
 			</target>
 		</buildTargets>
-	</storageModule>
-	<storageModule moduleId="refreshScope"/>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="org.eclipse.linuxtools.cdt.autotools.core.configuration.build.1876638904;org.eclipse.linuxtools.cdt.autotools.core.configuration.build.1876638904.;org.eclipse.linuxtools.cdt.autotools.core.toolchain.tool.gcc.932908288;cdt.managedbuild.tool.gnu.c.compiler.input.1567856124">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>
