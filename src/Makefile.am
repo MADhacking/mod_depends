@@ -1,7 +1,7 @@
 CLEANFILES = .libs/libmod_depends *~
 
 libmod_depends_la_SOURCES = mod_depends.c
-libmod_depends_la_CFLAGS = -Wall ${MODULE_CFLAGS}
+libmod_depends_la_CFLAGS = -Wall -I${top_srcdir}/include ${MODULE_CFLAGS}
 libmod_depends_la_LDFLAGS =  -rpath ${AP_LIBEXECDIR} -module -avoid-version
 
 lib_LTLIBRARIES = libmod_depends.la 
