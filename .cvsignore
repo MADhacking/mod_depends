@@ -1,0 +1,11 @@
+configure
+config.nice
+config.in
+config.sub
+config.guess
+Makefile.in
+install-sh
+aclocal.m4
+ltmain.sh
+missing
+depcomp
