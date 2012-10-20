@@ -6,7 +6,6 @@ mod_depends_la_CFLAGS  = -Wall -I${top_srcdir}/include ${MODULE_CFLAGS}
 mod_depends_la_LDFLAGS = -rpath ${AP_LIBEXECDIR} -module -avoid-version
 
 plugindir=${AP_LIBEXECDIR}/mod_depends
-plugin_LTLIBRARIES = http.la
 
 install: install-am
 	rm -f $(DESTDIR)${moddir}/mod_depends.a
