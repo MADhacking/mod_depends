@@ -1,42 +1,15 @@
-CLEANFILES = .libs/libmod_depends *~
+moddir=${AP_LIBEXECDIR}
+mod_LTLIBRARIES = mod_depends.la 
 
-libmod_depends_la_SOURCES = mod_depends.c
-libmod_depends_la_CFLAGS = -Wall -I${top_srcdir}/include ${MODULE_CFLAGS}
-libmod_depends_la_LDFLAGS =  -rpath ${AP_LIBEXECDIR} -module -avoid-version
+mod_depends_la_SOURCES = mod_depends.c
+mod_depends_la_CFLAGS  = -Wall -I${top_srcdir}/include ${MODULE_CFLAGS}
+mod_depends_la_LDFLAGS = -rpath ${AP_LIBEXECDIR} -module -avoid-version
 
-lib_LTLIBRARIES = libmod_depends.la 
+plugindir=${AP_LIBEXECDIR}/mod_depends
+plugin_LTLIBRARIES = http.la
 
-make_so: ${lib_LTLIBRARIES}
-	@if test ! -L mod_depends.so ; then ln -s .libs/libmod_depends.so mod_depends.so ; fi
-
-clean:
-	rm -fr .libs
-	rm -f *.o *.lo *.la
-	rm -f mod_depends.so
-
-install: make_so
-	@${APXS_BIN} -i -n depends mod_depends.so
-	cp ../include/mod_depends.h ${AP_INCLUDEDIR}
-	@echo ""
-	@echo ""
-	@echo "***********************************************"
-	@echo ""
-	@echo "   Please read the documentation at            "
-	@echo "   http://www.outoforder.cc/projects/apache/mod_depends/ "
-	@echo "   for details on configuration of this module     "
-	@echo ""
-	@echo "***********************************************"
-	@echo ""
-
-activate: make_so
-	@${APXS_BIN} -i -a -n depends mod_depends.so
-	@echo ""
-	@echo ""
-	@echo "***********************************************"
-	@echo ""
-	@echo "   Please read the documentation at            "
-	@echo "   http://www.outoforder.cc/projects/apache/mod_depends/ "
-	@echo "   for details on configuration of this module     "
-	@echo ""
-	@echo "***********************************************"
-	@echo ""
+install: install-am
+	rm -f $(DESTDIR)${moddir}/mod_depends.a
+	rm -f $(DESTDIR)${moddir}/mod_depends.la
+	mkdir -p $(DESTDIR)${AP_INCLUDEDIR}
+	cp -p $(top_srcdir)/include/mod_depends.h $(DESTDIR)${AP_INCLUDEDIR}
